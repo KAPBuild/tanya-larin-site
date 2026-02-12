@@ -1,0 +1,9 @@
+name = "tanya-larin-site"
+compatibility_date = "2024-01-01"
+main = "src/server/index.ts"
+
+[site]
+bucket = "./dist"
+
+[vars]
+SITE_URL = "https://tanyalarin.com"
