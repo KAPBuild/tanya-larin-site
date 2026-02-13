@@ -10,7 +10,9 @@ const featuredIds = [
   'jewelry-antique-gold-bracelet',      // Antique Gold Bracelet
   'pottery-dragons-incense',            // Dragons Incense
   'pottery-joker-mask',                 // Joker Mask
+  'pottery-stitched-vase',              // Stitched Vase
   'still-life-rose-creatures',          // Rose and Creatures
+  'still-life-cheese',                  // Still Life with Cheese
 ]
 
 const featuredPieces = featuredIds
