@@ -16,23 +16,6 @@ function Home() {
       <Hero />
 
       <FadeIn>
-        <section className="home-intro">
-          <div className="container text-container">
-            <p className="lead">
-              Tanya, a Russian-born artist, is a graduate of the College of Art in Yaroslavl.
-              Her art reflects the influence of the old Italian Masters, whose original paintings
-              she studied in European Museums of Art. Regularly experimenting with techniques and
-              colors, Tanya takes inspiration from bright and romantic paintings of the nineteenth
-              and early twentieth century.
-            </p>
-            <Link to="/about" className="intro-link">
-              Learn more about Tanya &rarr;
-            </Link>
-          </div>
-        </section>
-      </FadeIn>
-
-      <FadeIn>
         <FeaturedWork />
       </FadeIn>
 
@@ -49,6 +32,23 @@ function Home() {
               className="home-artist-image"
               loading="lazy"
             />
+          </div>
+        </section>
+      </FadeIn>
+
+      <FadeIn>
+        <section className="home-intro">
+          <div className="container text-container">
+            <p className="lead">
+              Tanya, a Russian-born artist, is a graduate of the College of Art in Yaroslavl.
+              Her art reflects the influence of the old Italian Masters, whose original paintings
+              she studied in European Museums of Art. Regularly experimenting with techniques and
+              colors, Tanya takes inspiration from bright and romantic paintings of the nineteenth
+              and early twentieth century.
+            </p>
+            <Link to="/about" className="intro-link">
+              Learn more about Tanya &rarr;
+            </Link>
           </div>
         </section>
       </FadeIn>
