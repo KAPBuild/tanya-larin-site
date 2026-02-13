@@ -37,6 +37,10 @@ function Home() {
       </FadeIn>
 
       <FadeIn>
+        <CallToAction />
+      </FadeIn>
+
+      <FadeIn>
         <section className="home-artist">
           <div className="container">
             <img
@@ -47,10 +51,6 @@ function Home() {
             />
           </div>
         </section>
-      </FadeIn>
-
-      <FadeIn>
-        <CallToAction />
       </FadeIn>
     </>
   )
