@@ -6,11 +6,10 @@ const featuredIds = [
   'portraits-sasha',                    // 1 - Sasha
   'still-life-cheese',                  // 2 - Still Life with Cheese
   'allegorical-dream',                  // 3 - Dream
-  'portraits-self-portrait',            // 4 - Self Portrait (painting)
-  'illustration-couple-on-bench',       // 5 - Couple on Bench
-  'portraits-50-year-anniversary',      // 6 - 50 Year Anniversary
-  'pottery-stitched-vase',              // 7 - Stitched Vase
-  'jewelry-antique-gold-bracelet',      // 8 - Antique Gold Bracelet
+  'illustration-couple-on-bench',       // 4 - Couple on Bench
+  'portraits-50-year-anniversary',      // 5 - 50 Year Anniversary
+  'pottery-stitched-vase',              // 6 - Stitched Vase
+  'jewelry-antique-gold-bracelet',      // 7 - Antique Gold Bracelet
 ]
 
 const featuredPieces = featuredIds
