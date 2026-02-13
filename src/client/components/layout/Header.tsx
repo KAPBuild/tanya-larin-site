@@ -34,65 +34,67 @@ function Header() {
   }, [menuOpen, handleKeyDown])
 
   return (
-    <header className="header">
-      <div className="header-inner container">
-        <Link to="/" className="header-logo">
-          Tanya Larin
-        </Link>
+    <>
+      <header className="header">
+        <div className="header-inner container">
+          <Link to="/" className="header-logo">
+            Tanya Larin
+          </Link>
 
-        {/* Desktop nav */}
-        <nav className="header-nav-desktop" aria-label="Main navigation">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              className={({ isActive }) =>
-                `nav-link ${isActive ? 'nav-link--active' : ''}`
-              }
-            >
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
-
-        {/* Mobile hamburger */}
-        <button
-          className={`hamburger ${menuOpen ? 'hamburger--open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-        >
-          <span className="hamburger-line" />
-          <span className="hamburger-line" />
-          <span className="hamburger-line" />
-        </button>
-
-        {/* Mobile overlay */}
-        <div
-          className={`mobile-menu ${menuOpen ? 'mobile-menu--open' : ''}`}
-          onClick={() => setMenuOpen(false)}
-        >
-          <nav
-            className="mobile-menu-nav"
-            aria-label="Mobile navigation"
-            onClick={(e) => e.stopPropagation()}
-          >
+          {/* Desktop nav */}
+          <nav className="header-nav-desktop" aria-label="Main navigation">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 className={({ isActive }) =>
-                  `mobile-nav-link ${isActive ? 'mobile-nav-link--active' : ''}`
+                  `nav-link ${isActive ? 'nav-link--active' : ''}`
                 }
-                onClick={() => setMenuOpen(false)}
               >
                 {link.label}
               </NavLink>
             ))}
           </nav>
+
+          {/* Mobile hamburger */}
+          <button
+            className={`hamburger ${menuOpen ? 'hamburger--open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+          >
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
+            <span className="hamburger-line" />
+          </button>
         </div>
+      </header>
+
+      {/* Mobile overlay — outside header so it's not constrained by .container */}
+      <div
+        className={`mobile-menu ${menuOpen ? 'mobile-menu--open' : ''}`}
+        onClick={() => setMenuOpen(false)}
+      >
+        <nav
+          className="mobile-menu-nav"
+          aria-label="Mobile navigation"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              className={({ isActive }) =>
+                `mobile-nav-link ${isActive ? 'mobile-nav-link--active' : ''}`
+              }
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </NavLink>
+          ))}
+        </nav>
       </div>
-    </header>
+    </>
   )
 }
 

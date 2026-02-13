@@ -139,16 +139,18 @@
 
 .mobile-menu {
   position: fixed;
-  top: 80px;
+  top: var(--nav-height);
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
   background-color: rgba(250, 248, 245, 0.98);
   z-index: 150;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 48px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -170,31 +172,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 32px 40px;
-  background-color: #FFFFFF;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
-  border: 2px solid #E5E0DB;
+  gap: 8px;
+  width: 100%;
+  padding: 0 var(--space-md);
 }
 
 .mobile-nav-link {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
   font-weight: 400;
-  color: #2C2C2C;
+  color: var(--color-text);
   text-decoration: none;
   text-align: center;
-  padding: 8px 16px;
+  padding: 12px 24px;
+  width: 100%;
   transition: color 0.2s ease;
 }
 
 .mobile-nav-link:hover {
-  color: #A0522D;
+  color: var(--color-accent);
 }
 
 .mobile-nav-link--active {
-  color: #A0522D;
+  color: var(--color-accent);
 }
 
 /* ========================================
