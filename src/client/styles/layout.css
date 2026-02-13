@@ -139,16 +139,16 @@
 
 .mobile-menu {
   position: fixed;
-  top: 0;
+  top: 80px;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(250, 248, 245, 0.98);
-  z-index: 90;
+  z-index: 150;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 20px;
+  padding-top: 40px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -169,15 +169,13 @@
 .mobile-menu-nav {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   gap: 12px;
   padding: 32px 40px;
   background-color: #FFFFFF;
   border-radius: 12px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
   border: 2px solid #E5E0DB;
-  min-width: 280px;
-  max-width: 90vw;
 }
 
 .mobile-nav-link {
