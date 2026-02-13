@@ -3,14 +3,13 @@ import { artworks } from '../../data/portfolio.ts'
 
 // Featured pieces in desired display order
 const featuredIds = [
-  'portraits-sasha',                    // Sasha - top
-  'portraits-50-year-anniversary',      // 50 Year Anniversary - second
-  'allegorical-dream',                  // Dream
-  'illustration-couple-on-bench',       // Couple on Bench
-  'jewelry-antique-gold-bracelet',      // Antique Gold Bracelet
-  'pottery-stitched-vase',              // Stitched Vase
-  'still-life-rose-creatures',          // Rose and Creatures
-  'still-life-cheese',                  // Still Life with Cheese
+  'portraits-sasha',                    // 1 - Sasha
+  'still-life-cheese',                  // 2 - Still Life with Cheese
+  'allegorical-dream',                  // 3 - Dream
+  'illustration-couple-on-bench',       // 4 - Couple on Bench
+  'portraits-50-year-anniversary',      // 5 - 50 Year Anniversary
+  'pottery-stitched-vase',              // 6 - Stitched Vase
+  'jewelry-antique-gold-bracelet',      // 7 - Antique Gold Bracelet
 ]
 
 const featuredPieces = featuredIds
