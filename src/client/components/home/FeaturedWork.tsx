@@ -1,7 +1,21 @@
 import { Link } from 'react-router-dom'
 import { artworks } from '../../data/portfolio.ts'
 
-const featuredPieces = artworks.filter((a) => a.featured).slice(0, 8)
+// Featured pieces in desired display order
+const featuredIds = [
+  'portraits-sasha',                    // Sasha - top
+  'portraits-50-year-anniversary',      // 50 Year Anniversary - second
+  'allegorical-dream',                  // Dream
+  'illustration-couple-on-bench',       // Couple on Bench
+  'jewelry-antique-gold-bracelet',      // Antique Gold Bracelet
+  'pottery-dragons-incense',            // Dragons Incense
+  'pottery-joker-mask',                 // Joker Mask
+  'still-life-rose-creatures',          // Rose and Creatures
+]
+
+const featuredPieces = featuredIds
+  .map(id => artworks.find(a => a.id === id))
+  .filter((a): a is NonNullable<typeof a> => a !== undefined)
 
 function FeaturedWork() {
   return (
