@@ -96,27 +96,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 5px;
-  width: 44px;
-  height: 44px;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
   cursor: pointer;
-  padding: 10px;
+  padding: 0;
   z-index: 110;
-  transition: background var(--duration-fast) var(--ease-out),
-              border-color var(--duration-fast) var(--ease-out);
-}
-
-.hamburger:hover {
-  background: var(--color-bg-alt);
-  border-color: var(--color-text-muted);
-}
-
-.hamburger:active {
-  background: var(--color-border);
 }
 
 @media (min-width: 768px) {
@@ -127,28 +114,13 @@
 
 .hamburger-line {
   display: block;
-  width: 20px;
+  width: 100%;
   height: 2px;
   background: var(--color-text);
   border-radius: 1px;
   transition: transform var(--duration-normal) var(--ease-out),
-              opacity var(--duration-fast) var(--ease-out),
-              background var(--duration-fast) var(--ease-out);
+              opacity var(--duration-fast) var(--ease-out);
   transform-origin: center;
-}
-
-.hamburger--open {
-  background: transparent;
-  border-color: transparent;
-}
-
-.hamburger--open:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: transparent;
-}
-
-.hamburger--open .hamburger-line {
-  background: var(--color-white);
 }
 
 .hamburger--open .hamburger-line:nth-child(1) {
@@ -194,23 +166,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-lg);
+  gap: var(--space-md);
+  background: rgba(44, 44, 44, 0.95);
+  padding: var(--space-lg) var(--space-xl);
+  border-radius: 12px;
 }
 
 .mobile-nav-link {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
-  font-weight: 400;
+  font-weight: 500;
   color: var(--color-white);
   text-decoration: none;
-  opacity: 0.8;
-  transition: opacity var(--duration-fast) var(--ease-out);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 6px;
+  transition: background var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
 }
 
-.mobile-nav-link:hover,
-.mobile-nav-link--active {
-  opacity: 1;
+.mobile-nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
   color: var(--color-white);
+}
+
+.mobile-nav-link--active {
+  color: var(--color-accent-soft);
 }
 
 /* ========================================
